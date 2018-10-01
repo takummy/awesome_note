@@ -5,7 +5,7 @@
 			<td><%= note.content %></td>
 			<td><%= link_to '詳細', note_path(note.id) %></td>
 			<td><%= link_to '編集', edit_note_path(note.id) %></td>
-			<td><%= link_to '削除', '#' %></td>
+			<td><%= link_to '削除', note_path(note.id), method: :delete, data: {confirm: '本当に削除しますか？'} %></td>
 		</tr>
 	<% end %>
 </table>

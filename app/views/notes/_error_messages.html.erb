@@ -2,7 +2,7 @@
 	<div class="error_message">
 		<h2><%= @note.errors.count %>件のエラーがあります！</h2>
 		<ul>
-			<%= @note.errors.full_messages.each do |msg| %>
+			<% @note.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 			<% end %>	
 		</ul>
