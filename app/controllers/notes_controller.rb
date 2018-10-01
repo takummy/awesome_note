@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+  before_action :set_note, only: [:show, :edit, :update]
+
   def index
     @notes = Note.all
   end
@@ -16,8 +18,10 @@ class NotesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def edit
-    @note = Note.find(params[:id])
   end
 
   def update
@@ -29,6 +33,10 @@ class NotesController < ApplicationController
   end
 
   private
+  def set_note
+    @note = Note.find(params[:id])
+  end
+
   def note_params
     params.require(:note).permit(:content)
   end
