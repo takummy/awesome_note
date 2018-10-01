@@ -3,9 +3,11 @@
 	<% @notes.each do |note| %>
 		<tr>
 			<td><%= note.content %></td>
-			<td><%= link_to '詳細', # %></td>
-			<td><%= link_to '編集', # %></td>
-			<td><%= link_to '削除', # %></td>
+			<td><%= link_to '詳細', '#' %></td>
+			<td><%= link_to '編集', '#' %></td>
+			<td><%= link_to '削除', '#' %></td>
 		</tr>
 	<% end %>
 </table>
+<%= link_to 'Home', root_path %>
+<%= link_to '新規投稿', new_note_path %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :notes do 
+  root 'notes#home'
+  resources :notes do
     collection do
       :confirm
     end
