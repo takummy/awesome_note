@@ -1,0 +1,11 @@
+<h1>投稿一覧</h1>
+<table>
+	<% @notes.each do |note| %>
+		<tr>
+			<td><%= note.content %></td>
+			<td><%= link_to '詳細', # %></td>
+			<td><%= link_to '編集', # %></td>
+			<td><%= link_to '削除', # %></td>
+		</tr>
+	<% end %>
+</table>

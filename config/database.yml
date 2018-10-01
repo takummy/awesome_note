@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  user_name: awesome_note
+  password: awesome
+  host: localhost
+
+development:
+  <<: *default
+  database: awesome_note_development
+
+test:
+  <<: *default
+  database: awesome_note_test
+
+production:
+  <<: *default
+  database: db/production.sqlite3
