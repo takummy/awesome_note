@@ -16,6 +16,18 @@ class NotesController < ApplicationController
     end
   end
 
+  def edit
+    @note = Note.find(params[:id])
+  end
+
+  def update
+    if @note.update(note_params)
+      redirect_to notes_path, notice: '編集しました！'
+    else
+      render :edit
+    end
+  end
+
   private
   def note_params
     params.require(:note).permit(:content)

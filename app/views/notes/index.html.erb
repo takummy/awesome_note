@@ -4,7 +4,7 @@
 		<tr>
 			<td><%= note.content %></td>
 			<td><%= link_to '詳細', '#' %></td>
-			<td><%= link_to '編集', '#' %></td>
+			<td><%= link_to '編集', edit_note_path(note.id) %></td>
 			<td><%= link_to '削除', '#' %></td>
 		</tr>
 	<% end %>
