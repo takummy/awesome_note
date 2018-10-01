@@ -6,7 +6,16 @@ class NotesController < ApplicationController
   end
 
   def new
-    @note = Note.new
+    if params[:back]
+      @note = Note.new(note_params)
+    else
+      @note = Note.new
+    end
+  end
+
+  def confirm
+    @note = Note.new(note_params)
+    render :new if @note.invalid?
   end
 
   def create

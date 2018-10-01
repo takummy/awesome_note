@@ -1,0 +1,11 @@
+<h2>以下の内容で送信します</h2>
+<%= form_with(model: @note, url: notes_path, local: true) do |f| %>
+	<%= f.hidden_field :content %>
+	<p><%= @note.content %></p>
+	<%= f.submit 'OK' %>
+<% end %>
+
+<%= form_with(model: @note, url: new_note_path, method: :get, local: true) do |f| %>
+	<%= f.hidden_field :content %>
+	<%= f.submit '戻る', name: 'back' %>
+<% end %>
