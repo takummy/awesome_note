@@ -18,10 +18,11 @@ class NotesController < ApplicationController
     render :new if @note.invalid?
   end
 
-  def create
+  def create  
     @note = Note.new(note_params)
     if @note.save
-      redirect_to notes_path, notice: '投稿しました！'
+      flash[:success] = '投稿しました！'
+      redirect_to notes_path
     else
       render :new
     end
@@ -35,7 +36,8 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
-      redirect_to notes_path, notice: '編集しました！'
+      flash[:info] = '編集しました！'
+      redirect_to notes_path
     else
       render :edit
     end
@@ -43,7 +45,8 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
-    redirect_to notes_path, notice: '削除しました！'
+    flash[:info] = '削除しました！'
+    redirect_to notes_path
   end
 
   private

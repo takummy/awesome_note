@@ -1,3 +1,55 @@
-// Place all the styles related to the notes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+  }
+  .container-fluid {
+    background-color: teal;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: white;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  .container {
+    margin: 0 auto;
+    min-height: 100%;
+    position: relative;
+  }
+}
+
+footer {
+  p {
+    text-align: center;
+  }
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+// home
+.jumbotron {
+  margin-top: 30px;
+  background-color: #dff0d8;
+  p, h1 {
+    text-align: center;
+  }
+}

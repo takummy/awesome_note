@@ -1,5 +1,5 @@
 <% if @note.errors.any? %>
-	<div class="error_message">
+	<div class="alert alert-danger">
 		<h2><%= @note.errors.count %>件のエラーがあります！</h2>
 		<ul>
 			<% @note.errors.full_messages.each do |msg| %>
