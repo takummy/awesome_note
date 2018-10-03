@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_note, only: [:edit, :update, :destroy]
 
   def index
-    @notes = Note.all
+    @notes = Note.order('created_at DESC').paginate(page: params[:page], per_page: 15)
   end
 
   def new
@@ -26,9 +26,6 @@ class NotesController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
   end
 
   def edit

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'notes#home'
-  resources :notes do
+  resources :notes, except: [:show] do
     collection do
       post :confirm
     end

@@ -1,19 +1,20 @@
 header {
-  #logo {
-    float: left;
+  width: 100%;
+  .logo {
     margin-right: 10px;
     font-size: 1.7em;
-    color: #fff;
+    color: #f3f9f9;
     text-transform: uppercase;
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
   }
   .container-fluid {
+    padding: 20px;
     background-color: teal;
   }
   .navbar-default .navbar-nav>li>a {
-    color: white;
+    color: #f3f9f9;
   }
 }
 
@@ -25,6 +26,7 @@ html {
 body {
   height: 100%;
   .container {
+    width: 980px;
     margin: 0 auto;
     min-height: 100%;
     position: relative;
@@ -32,17 +34,33 @@ body {
 }
 
 footer {
-  p {
-    text-align: center;
-  }
   margin-top: 45px;
+  margin-right: 0px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777;
-  height: 100px;
-  width: 100%;
+  color: #f3f9f9;
+  background-color: teal;
+  width: 100%;  
+    height: 50px;
   position: absolute;
+  left: 0;
   bottom: 0;
+  display: table;
+  p {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.page-header {
+    color: #20b3b3;
+    text-align: center;
+}
+
+.col-center {
+  float: none;
+  margin: auto;
 }
 
 // home
@@ -52,4 +70,58 @@ footer {
   p, h1 {
     text-align: center;
   }
+}
+
+//index
+.notes-container {
+  text-align: center;
+}
+
+.notes {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 51px;
+
+  li {
+    overflow: auto;
+    margin: 1px;
+    padding: 10px 0;
+    border: 0.5px solid #f3f9f9;
+    background-color: #f3f9f9;
+    a {
+      color: #5bbd9a;
+    }
+  }
+}
+
+#pagination {
+  text-align: center;
+}
+
+//form
+.form-group {
+  text-align: center;
+  .form-control {
+    height: 100px;
+    text-align: center;
+  }
+}
+
+.note-submit {
+  text-align: center;
+  .btn-primary {
+    color: teal;
+    background-color: #49b97c36;
+    border-color: #49b97c36;
+  }
+}
+
+//confirm
+#content-wrapper{
+  text-align: center;
+  padding: 100px;
+  margin-bottom: 15px;
+  border: 0.5px solid #f3f9f9;
+  background-color: #f3f9f9;
 }

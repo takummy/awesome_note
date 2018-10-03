@@ -1,8 +1,12 @@
 <%= form_with(model: @note, url: new_or_confirm, local: true) do |f| %>
 	<%= render 'error_messages' %>
 	<div class="note_content">
-		<%= f.label :content %>
-		<%= f.text_field :content %>
+		<div class="form-group">
+			<%= f.label :content %>
+			<%= f.text_field :content, class: "form-control" %>
+		</div>
+		<div class="note-submit">
+			<%= f.submit class: "btn btn-primary" %>
+		</div>
 	</div>
-	<%= f.submit %>
 <% end %>

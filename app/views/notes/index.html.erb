@@ -1,13 +1,13 @@
-<h1>投稿一覧</h1>
-<table>
-	<% @notes.each do |note| %>
-		<tr>
-			<td><%= note.content %></td>
-			<td><%= link_to '詳細', note_path(note.id) %></td>
-			<td><%= link_to '編集', edit_note_path(note.id) %></td>
-			<td><%= link_to '削除', note_path(note.id), method: :delete, data: {confirm: '本当に削除しますか？'} %></td>
-		</tr>
-	<% end %>
-</table>
-<%= link_to 'Home', root_path %>
-<%= link_to '新規投稿', new_note_path %>
+<div class="notes-container row">
+    <div class="page-header">
+        <h1>投稿一覧</h1>
+    </div>
+    <div class="col-center">
+    	<ul class="notes">
+        	<%= render @notes %>
+    	</ul>
+	</div>
+</div>
+<div id="pagination">
+	<%= will_paginate %>
+</div>
