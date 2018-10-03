@@ -1,9 +1,9 @@
 <li>
-	<h4><%= note.content %></h4>
-	<div class="buttons">
-		<small>
-			<%= link_to '編集', edit_note_path(note.id) %>
-			<%= link_to '削除', note_path(note.id), method: :delete, data: {confirm: '本当に削除しますか？'} %>
-		</small>
-	</div>
+    <h4><%= note.content %></h4>
+    <div class="buttons">
+        <small>
+            <%= link_to '編集', edit_note_path(note.id) %>
+            <%= link_to '削除', note_path(note.id), method: :delete, data: {confirm: '本当に削除しますか？'} %>
+        </small>
+    </div>
 </li>

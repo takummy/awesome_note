@@ -1,21 +1,21 @@
 <div class="form-container col-center">
-	<div class="page-header">
-		<h2>以下の内容で送信します</h2>
-	</div>
-	<%= form_with(model: @note, url: notes_path, local: true) do |f| %>
-		<%= f.hidden_field :content %>
-		<div id="content-wrapper">
-			<%= @note.content %>
-		</div>
-		<div class="note-submit">
-			<%= f.submit 'OK', class: "btn btn-primary" %>
-		</div>
-	<% end %>
+    <div class="page-header">
+        <h2>以下の内容で送信します</h2>
+    </div>
+    <%= form_with(model: @note, url: notes_path, local: true) do |f| %>
+        <%= f.hidden_field :content %>
+        <div id="content-wrapper">
+            <%= @note.content %>
+        </div>
+        <div class="note-submit">
+            <%= f.submit 'OK', class: "btn btn-primary" %>
+        </div>
+    <% end %>
 
-	<%= form_with(model: @note, url: new_note_path, method: :get, local: true) do |f| %>
-		<%= f.hidden_field :content %>
-		<div class="note-submit">
-			<%= f.submit '戻る', class: "btn btn-secondary", name: 'back' %>
-		</div>
-	<% end %>
+    <%= form_with(model: @note, url: new_note_path, method: :get, local: true) do |f| %>
+        <%= f.hidden_field :content %>
+        <div class="note-submit">
+            <%= f.submit '戻る', class: "btn btn-secondary", name: 'back' %>
+        </div>
+    <% end %>
 </div>
