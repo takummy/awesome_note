@@ -9,5 +9,6 @@ module AwesomeNote
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
     config.log_level = :info
+    config.assets.initialize_on_precompile = false
   end
 end
