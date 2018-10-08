@@ -1,12 +1,11 @@
 header {
   width: 100%;
-  .logo {
-    margin-right: 10px;
+  #logo {
     font-size: 1.7em;
     color: #f3f9f9;
     text-transform: uppercase;
     letter-spacing: -1px;
-    padding-top: 9px;
+    padding: 15px;
     font-weight: bold;
   }
   .container-fluid {
@@ -100,11 +99,13 @@ footer {
 }
 
 //form
-.form-group {
-  text-align: center;
-  .form-control {
-    height: 100px;
+#note-content {
+  .form-group {
     text-align: center;
+    .form-control {
+      height: 100px;
+      text-align: center;
+    }
   }
 }
 

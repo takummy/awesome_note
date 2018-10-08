@@ -1,6 +1,8 @@
 <%= form_with(model: @note, url: new_or_confirm, local: true) do |f| %>
-    <%= render 'error_messages' %>
-    <div class="note_content">
+    
+    <%= render 'shared/error_messages', object: f.object %>
+    
+    <div id="note-content">
         <div class="form-group">
             <%= f.label :content %>
             <%= f.text_field :content, class: "form-control" %>
